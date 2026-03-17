@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C5A572;
+  --gold-light: #D4BC8A;
+  --gold-dark: #A88A56;
+  --bg-primary: #0A0907;
+  --bg-secondary: #110F0A;
+  --bg-card: #1A1610;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #E8DCC8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lotus SVG decoration */
+.lotus-svg {
+  filter: drop-shadow(0 0 20px rgba(197, 165, 114, 0.3));
+}
+
+/* Gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #A88A56 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect for cards */
+.card-glow {
+  box-shadow: 0 0 30px rgba(197, 165, 114, 0.08), 0 1px 0 rgba(197, 165, 114, 0.1) inset;
+}
+
+/* Separator line */
+.zen-divider {
+  background: linear-gradient(90deg, transparent, #C5A572, transparent);
+  height: 1px;
+  border: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #110F0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3D3421;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A572;
+}
+
+/* Smooth animations */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, #C5A572 25%, #D4BC8A 50%, #C5A572 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
